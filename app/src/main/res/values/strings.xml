@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CatAPI</string>
+    <string name="txt_width">Width: </string>
+    <string name="txt_height">Height: </string>
+    <string name="txt_id">Id: </string>
+    <string name="txt_btn_save">Save</string>
+</resources>
