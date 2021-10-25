@@ -63,7 +63,7 @@ class CatsListFragment : Fragment(R.layout.fragment_cats_list), OnCatItemClickLi
     }
 
     override fun onItemClick(cat: Cat) {
-        catViewModel.cat = cat
+        catViewModel.cat.value = cat
         commitTransaction(CatFragment())
     }
 

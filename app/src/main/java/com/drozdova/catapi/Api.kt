@@ -26,7 +26,6 @@ object CatApiImpl {
         .baseUrl("https://api.thecatapi.com")
         .build()
 
-//    val catService: CatApi = retrofit.create(CatApi::class.java)
     private val _catService: CatApi = retrofit.create(CatApi::class.java)
     val catService = _catService
 }

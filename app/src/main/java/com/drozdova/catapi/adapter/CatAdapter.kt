@@ -23,11 +23,6 @@ class CatAdapter(context: Context, private var clickListener: OnCatItemClickList
     override fun onBindViewHolder(holder: CatViewHolder, position: Int) {
         holder.bind(getItem(position), clickListener)
     }
-
-//    fun addItems(newItems: List<Cat>) {
-//        items.addAll(newItems)
-//        notifyDataSetChanged()
-//    }
 }
 
 class CatViewHolder(private val binding: RvItemCatBinding) : RecyclerView.ViewHolder(binding.root) {

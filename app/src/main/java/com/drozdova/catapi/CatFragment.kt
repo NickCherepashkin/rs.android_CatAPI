@@ -22,11 +22,11 @@ class CatFragment : Fragment(R.layout.fragment_cat) {
 
    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val cat = catViewModel.cat
+        val cat = catViewModel.cat.value
 
         if (cat != null) {
             binding.imageViewFull.load(cat.url)
-	    binding.textViewWidth.append(cat.width)
+	        binding.textViewWidth.append(cat.width)
             binding.textViewHeight.append(cat.height)
             binding.textViewName.append(cat.id)
         }
@@ -51,7 +51,7 @@ class CatFragment : Fragment(R.layout.fragment_cat) {
             context?.contentResolver,
             bitmap,
             title,
-            "${"jjjjj"} $title"
+            "${""} $title"
         )
     }
 

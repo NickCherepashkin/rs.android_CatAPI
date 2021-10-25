@@ -16,7 +16,7 @@ class CatsPageSource(
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Cat> {
         // получить номер страницы (page)
-        val page: Int = params.key ?: 1
+        val page: Int = params.key ?: 0
         // получить количество элементов на странице (pageSize)
         val pageSize: Int = params.loadSize
         val response = catService.catService.getCatsList(page, pageSize)

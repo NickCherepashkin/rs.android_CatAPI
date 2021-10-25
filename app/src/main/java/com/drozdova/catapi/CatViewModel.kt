@@ -12,13 +12,11 @@ import com.drozdova.catapi.data.Cat
 
 class CatViewModel : ViewModel() {
     private val catPageSource: CatsPageSource = CatsPageSource(CatApiImpl)
-    var cat: Cat? = null
+    var cat = MutableLiveData<Cat>()
 
     val catsFlow = Pager (
         PagingConfig(
             pageSize = 10
-//            prefetchDistance = 3,
-//            enablePlaceholders = true
         )
     ) {
         catPageSource
